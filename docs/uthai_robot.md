@@ -11,21 +11,6 @@
 * 1Mbps high-speed Dynamixel bus for joint control
 * 3-axis gyro, 3-axis accelerometer
 
-## Specification
-
-| Description | Uthai Robot 1- |
-| :---------: | :------------: |
-| Hight | About 1030mm |
-| Weight | About 3.5kg |
-| DOF | 12 xxxx |
-| Actuator | Dynamixel EX-106+ |
-| Main Controller | Odroid xxxx |
-| Sub Controller | Nucleo F411RE \n 100MHz ARM Cortex xxxx |
-| Camera | xxx |
-| Sensor | 3-Axis Gyroscope, 3-Axis Accelerometer, 3-Axis Magnetometer |
-| Power Source | LIPO or Switching Power Supply |
-| Developement Environment | OS: Linux, ROS, Python, C++, MATLAB, Dynamixel SDK |
-| Networking | Eternet WiFi |
 
 
 ## Actuator Spec Specifications
@@ -39,3 +24,45 @@
 | Stall Current | 2.3 A |
 | No Load Speed | 55 RPM |
 | Protocol | 1.0,2.0 |
+
+## The Mechanical Design of Uthai Humnaoid
+
+ได้ตัวอย่างการออกแบบมาจากหุ่นยนต์ตัวไหนก็ไม่รู้ หาก่อน
+
+### Design concept
+
+หุ่นยนต์ถูกออกแบบโดย แท้และเบิร์ด ตามคอนเซปด้านล่างนี้
+
+* น้ำหนักเบา แข็งแรง ทนทาน
+* ง่ายต่อการพัฒนาต่อยอด
+
+### Specifications of Uthai Humanoid 
+
+| Description | Uthai Robot 1-A |
+| :---------: | :------------: |
+| Hight | About 1030mm |
+| Weight | About 3.5kg |
+| Hight of CoM | 800mm |
+| Feet size | 150 x 150 mm |
+| DOF | 12 xxxx |
+| Actuator | Dynamixel EX-106+ |
+| Main Controller | Odroid xxxx |
+| Sub Controller | Nucleo F411RE<br/>100MHz ARM Cortex xxxx |
+| Camera | xxx |
+| Sensor | 3-Axis Gyroscope<br/> 3-Axis Accelerometer<br/> 3-Axis Magnetometer |
+| Power Source | LIPO or Switching Power Supply |
+| Developement Environment | OS: Linux, ROS,<br/> Python, C++, MATLAB, Dynamixel SDK |
+| Networking | Eternet WiFi |
+
+### DH-Parameter of Uthai Humaoid
+
+| link(i) | a(i) | al(i) | d(i) | theta(i) |
+| :-----: | :--: | :--: | :--: | :--: |
+| 1 | 0 | pi/2 | 0 | pi+\theta |
+| 2 | 0 | pi/2 | 0 | pi+theta(1) |
+| 3 | 0 | pi/2 | 0 | pi+theta(1) |
+| 4 | 0 | pi/2 | 0 | pi+theta(1) |
+| 5 | 0 | pi/2 | 0 | pi+theta(1) |
+| 6 | 0 | pi/2 | 0 | pi+theta(1) |
+| 7 | 0 | pi/2 | 0 | pi+theta(1) |
+
