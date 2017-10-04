@@ -5,7 +5,7 @@ name_ros_distro=${name_ros_distro:="kinetic"}
 
 version=`lsb_release -sc`
 
-echo "[ROS Kinetic ONLY supports Wily(Ubuntu 15.10) , Xenail(Ubuntu 16.04)]"
+echo "[ROS Kinetic ONLY supports Wily(Ubuntu 15.10) , Xenial(Ubuntu 16.04)]"
 printf "Do you want to install ROS (Y/n)"
 read install
 if [ "$install" == "N" ] || [ "$install" == "n" ]; then
@@ -14,7 +14,7 @@ fi
 
 echo "[Checking the ubuntu version]"
 case $version in
-    xenail)
+    xenial)
         ;;
     willy)
         ;;

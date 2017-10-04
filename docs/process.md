@@ -58,27 +58,53 @@ connected devices, and can control all the connected servos from one controller.
 ### Sensors
 
 
-### Controller
-
+### Controlle
 
 ### Communication
 การติดต่อสื่อสาร
 
 
-
 ## Software Overview
 
 
+The software and control architecture of the humanoid robot ARMAR-III consists of three layers (see figure). On the lowest level, DSP perform low-level sensorimotor control realized as cascaded velocity-position control loops. On the same level, hardware such as microphones, loudspeakers, and cameras are available. All these elements are connected to the PCs in the mid-level, either directly or via CAN bus. The software in the mid-level is realized using the Modular Controller Architecture (MCA2). The PCs in the mid-level are responsible for higher-level control (forward and inverse kinematics), the holonomic platform, and speech processing.
+
+The first two levels can be regarded as stable i.e. the implemented modules remain unchanged. The programming of the robot takes place on the highest level only. Here, the so-called robot interface allows for convenient access to the robot's sensors and actuators via C++ variables and method calls.
+
+To allow for effective and efficient programming of the robot, in addition to direct access to the robot's sensors and actors, two abstraction levels are defined: tasks and skills. Skills implement atomic capabilities such as platform navigation, visual object search, grasping objects, placing objects, handing over objects, opening doors, closing doors, etc. Tasks are operate on a higher level and are composed of several skills, e.g. bringing juice from the fridge
+
+การออกแบบซอฟแวร์และระบบควบคุมของหุ่นยนต์ UTHAI จะประกอบด้วย 3 เลเยอร์
+
+เลเยอร์แรก หรือส่วนของ Hardware จะเป็นส่วนของพวกอุปกรณ์ต่างๆ เช่น มอเตอร์ เซนเซอร์ กล้อง ไมโครโฟน ลำโพง รวมไปถึงไดรเวอร์ด้วย เช่นตัวควบคุม PID, Speech,Audio 
+
+เลเยอร์ที่สอง ใช้ Modular Controller Architecture ในการทำเป็นส่วนของ Hardware Services
+เช่น Motion Control, forward kinematics, inverse kinematics, calculate com zmp,
+
+สองส่วนแรกจะเป็นส่วนที่จะต้องทำให้มีความเสถียร ไม่ควรจะแก้โปรแกรมบ่อยๆ ส่วนที่จะแก้คือส่วนที่เป็น highest level เท่านั้น
+
+skill เป็นเหมือนความสามารถเล็กๆเช่น navigation, visual object search, grasping object, placing object, opening door, close door, path planing, motion planing
+speech recognition
+
+
+task จะเป็นการรวมเอา skill หลายๆ skill มารวมกัน เช่น หยิบน้ำส้มออกจากตู้เย็น เดินวนรอบตึดฟีโบ้ นำทัวร์พิพิธภรรณ
 ### How to move robots?
 
-ROS framework (https://upload.wikimedia.org/wikipedia/commons/7/7a/ROS_cat.png)
+![ROS framework](https://upload.wikimedia.org/wikipedia/commons/7/7a/ROS_cat.png)
+
+ROS เป็น open-source ลักษณะเป็นเหมือน OS สำหรับหุ่นยนต์
+เรียกใช้ service 
+
+ใช้ภาษาได้หลากหลาย Python, C++, Java, Ruby, MATLAB and many others
+
 
 ### Simulation
 
 Gazebo
 
-### How to build new program
-
+Multi-robot simulator
+Support for several types of sensors
+Pluggable and extendable to add more components and robot models
+Better integration with ROS
 
 
 ## Work Flow
