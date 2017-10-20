@@ -68,12 +68,16 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
    $ cat /var/lib/misc/dnsmasq.leases
    ```
    จะได้ค่าตามแบบที่เห็นนี้
+   
+   > ไปแคปรูปมาใส่
 
 6. หลังจากได้ IP address มาแล้วก็แสดงว่าเราสามารถที่จะติดต่อกับ Odroid ผ่าน SSH ได้
 
    ```bash 
    $ ssh odroid@%ip_address_ของ_odroid%
    ```  
+   > แคปรูปมาใส่
+   
    ในที่นี้คือ 10.42.0.91 จะใช้คำสั่งเป็น
    ```bash
    $ ssh odroid@10.42.0.91 
@@ -81,7 +85,11 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
    Password Default จะเป็น `odroid`
    
 7. ถ้าทุกอย่างถูกต้อง เราก็จะสามารถเข้าถึงและควบคุม Odroid ผ่านทาง SSH ได้
+   
+   > แคปรูปมาใส่
 
 8. ทดลองใช้คำสั่ง `roscore` หากเห็นแบบในรูปก็แสดงว่าสามารถใช้งาน ROS ได้แล้ว
+
+   > แคปรูปมาใส่
 
 
