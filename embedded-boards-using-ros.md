@@ -4,7 +4,7 @@
 
 Odroid-XU4 สามารถลง
 
-| ![Odroid-XU4](/assets/odroid_xu4.jpg) <br/> Odroid-XU4|
+| ![Odroid-XU4](/assets/odroid_xu4.jpg) Odroid-XU4|
 | :---: |
 
 
