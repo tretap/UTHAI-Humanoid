@@ -38,7 +38,7 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
    ![Etcher\_1](/assets/Etcher_1.png)  
    เลือกไฟล์ Image ที่ต้องการลงใน Odroid  
    ![Etcher\_2](/assets/Etcher_2.png)  
-   กด Select Drive แล้วเลือก SDcard ที่ต้องการ แล้วกด Continue  
+   กด Select drive แล้วเลือก SDcard ที่ต้องการ แล้วกด Continue  
    ![Etcher\_3](/assets/Etcher_3.png)  
    ![Etcher\_4](/assets/Etcher_4.png)  
    กด Flash แล้วรอให้โปรแกรม Burn เสร็จ  
@@ -58,28 +58,30 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 2. Connection name ตั้งชื่อว่า Shared และกดไปที่ Tab IPv4 Setting เลือก Method เป็น Shared to other computers
 ![ssh\_3](/assets/ssh_3.png)
 
-3. หลังจากสร้างเสร็จแล้วก็ในนำ SDcard ใส่เข้าไปใน Odroid และเสียบสาย micro usb 5V แล้วต่อสาย LAN เข้ากับ PC
+3. หลังจากสร้างเสร็จแล้วก็ในนำ SDcard ใส่เข้าไปใน Odroid เสียบสาย power 5V แล้วต่อสาย LAN เข้ากับ PC
 
-4. เมื่อ Board boots up ขึ้นมาแล้วมันจะเชื่อมต่อ Share Network โดยอัตโนมัติถ้าหากเชื่อมต่อถูกต้อง แสดงว่าตอนนี้ Board Odroid นั้นจะมี IP Address เป็นของตัวเอง
+4. เมื่อ Board boots up ขึ้นมาแล้วมันจะเชื่อมต่อ Share Network โดยอัตโนมัติถ้าหากเชื่อมต่อแล้ว หมายความว่าตอนนี้ Board Odroid นั้นจะมี IP Address เป็นของตัวเอง
 
-5. ถึงตอนนี้เราจำเป็นที่จะต้องรู้ว่า ip address เป็นอะไร คำสั่งที่จะค้นหามันก็คือ \  
-    $ cat /var/lib/misc/dnsmasq.leases
+5. ถึงตอนนี้เราจะต้องหาว่า IP address ของ Odroid เป็นอะไรถึงจะเข้าไปควบคุมได้ ซึ่งคำสั่งที่จะหาก็คือ
 
+   ```bash
+   $ cat /var/lib/misc/dnsmasq.leases
+   ```
    จะได้ค่าตามแบบที่เห็นนี้
 
-6. ถ้าได้ ip address มาแล้วก็แสดงว่าเราสามารถที่จะติดต่อสื่อสารกับ board ของเราได้แล้วผ่าน SSH  
-    $ ssh odroid@%ip\_address%  
-    10.42.0.91  
-    password คือ odroid
+6. หลังจากได้ IP address มาแล้วก็แสดงว่าเราสามารถที่จะติดต่อกับ Odroid ผ่าน SSH ได้
 
-ถ้าทุกอย่างถูกต้อง เราก็จะสามารถเข้าถึง odroid ผ่าน ssh ได้ และสามารถใช้คำสั่ง ros ได้
+   ```bash 
+   $ ssh odroid@%ip_address_ของ_odroid%
+   ```  
+   ในที่นี้คือ 10.42.0.91 จะใช้คำสั่งเป็น
+   ```bash
+   $ ssh odroid@10.42.0.91 
+   ```  
+   Password Default จะเป็น `odroid`
+   
+7. ถ้าทุกอย่างถูกต้อง เราก็จะสามารถเข้าถึงและควบคุม Odroid ผ่านทาง SSH ได้
 
-## install vnc server
+8. ทดลองใช้คำสั่ง `roscore` หากเห็นแบบในรูปก็แสดงว่าสามารถใช้งาน ROS ได้แล้ว
 
-## Controlling GPIO pins from ROS
-
-And these are the commands to install wiringpi on Odroid:  
-$ git clone [https://github.com/hardkernel/wiringPi.git](https://github.com/hardkernel/wiringPi.git)  
-$ cd wiringPi  
-$ sudo ./build
 
