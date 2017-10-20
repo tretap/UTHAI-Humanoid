@@ -19,9 +19,9 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 
 1. Download Odroid-ROS images จากลิ้งค์ข้างล่างนี้
 
-   Download Ubuntu select manual: [Here](https://odroid.in/ubuntu_16.04lts/)  
-   Download Odroid-C1: [Here](https://odroid.in/ubuntu_16.04lts/ubuntu-16.04.3-mate-odroid-c1-20170908.img.xz) 1.1G  
-   Download Odroid-XU4: [Here](https://odroid.in/ubuntu_16.04lts/ubuntu-16.04.3-4.9-mate-odroid-xu4-20170824.img.xz) 1.2G
+   Download Manual: [Here](https://odroid.in/ubuntu_16.04lts/)  
+   Download Odroid-C1: [Here](https://odroid.in/ubuntu_16.04lts/ubuntu-16.04.3-mate-odroid-c1-20170908.img.xz)  
+   Download Odroid-XU4: [Here](https://odroid.in/ubuntu_16.04lts/ubuntu-16.04.3-4.9-mate-odroid-xu4-20170824.img.xz)
 
 2. Download Burn images to SD card จากลิ้งค์เว็บข้างล่างนี้
 
