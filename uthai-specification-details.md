@@ -69,7 +69,7 @@ http://support.robotis.com/en/techsupport_eng.htm#product/thormang3_main.htm
 | DOF | 12 xxxx |
 | Actuator | Dynamixel EX-106+ |
 | Main Controller | Odroid xxxx |
-| Sub Controller | Nucleo F411RE<br/> 100MHz ARM Cortex xxxx |
+| Sub Controller | Nucleo F411RE 100MHz ARM Cortex xxxx |
 | Camera | xxx |
 | Sensor | 3-Axis Gyroscope 3-Axis Accelerometer 3-Axis Magnetometer |
 | Power Source | LIPO or Switching Power Supply |
