@@ -6,12 +6,12 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 
 ![Odroid-XU4](/assets/odroid_xu4.jpg)
 
-## Running ROS on Odroid boards
+### Running ROS on Odroid boards
 
 การติดตั้ง ROS ลงบน Odroid มีวิธีการลงอยู่ 2 แบบคือ
 
-1. ลง Linux OS เปล่าๆ แล้วถึงลง ROS ตาม
-2. ลง Linux OS ที่มี ROS มาพร้อมให้ในตัวอยู่แล้ว
+   1. ลง Linux OS เปล่าๆ แล้วถึงลง ROS ตาม
+   2. ลง Linux OS ที่มี ROS มาพร้อมให้ในตัวอยู่แล้ว
 
 เราจะมาสอนลง ROS บน Odroid แบบที่ 2 คือมี ROS prebuild มาให้
 
@@ -35,35 +35,30 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 
    เปิดโปรแกรม Etcher ขึ้นมา กดเลือก Select image
 
-   ![Etcher\_1](/assets/Etcher_1.png)
-   เลือกไฟล์ Image ที่ต้องการลงใน Odroid
-   ![Etcher\_2](/assets/Etcher_2.png)
-   กด Select Drive แล้วเลือก SDcard ที่ต้องการ
+   ![Etcher\_1](/assets/Etcher_1.png)  
+   เลือกไฟล์ Image ที่ต้องการลงใน Odroid  
+   ![Etcher\_2](/assets/Etcher_2.png)  
+   กด Select Drive แล้วเลือก SDcard ที่ต้องการ แล้วกด Continue  
    ![Etcher\_3](/assets/Etcher_3.png)  
    ![Etcher\_4](/assets/Etcher_4.png)  
-   กด Flash แล้วรอให้โปรแกรม Burn เสร็จ
-   ![Etcher\_5](/assets/Etcher_5.png)  
-  
+   กด Flash แล้วรอให้โปรแกรม Burn เสร็จ  
+   ![Etcher\_5](/assets/Etcher_5.png)
+
    ![Etcher\_7](/assets/Etcher_7.png)
-   
+
    ใช้ระยะเวลาประมาณ 30 นาที
-   
 
+### Connecting Odroid to PC 
 
-## Connecting Odroid to PC
+1. คลิกที่ Edit Connection... ตรง Network Option ตามรูป หลังจากนั้นคลิก Add เพื่อที่จะสร้าง Connection อันใหม่ขึ้นมา
+![ssh\_1](/assets/ssh_1.jpg)
+เลือกเป็น Ethernet แล้วกด Create...
+![ssh\_2](/assets/ssh_2.png)
 
-ในการเชื่อมต่อ Odroid boards เข้ากับ PC นั้นมีหลักๆอยู่ 2 วิธี
+2. Connection name ตั้งชื่อว่า Shared และกดไปที่ Tab IPv4 Setting เลือก Method เป็น Shared to other computers
+![ssh\_3](/assets/ssh_3.png)
 
-1. เชื่อมต่อโดยการให้ devices ทั้งคู่ต่อเข้ากับ network เดียวกัน
-2. เชื่อมต่อโดยตรงโดยไม่ผ่าน router แต่ใช้ Wired LAN หรือ Wi-Fi hotspot แทน
-
-วิธีการตั้งค่า wired hotspot บน Ubuntu สำหรับการเชื่อมต่อกับ boards
-
-1. คลิกที่ Edit Connection... ตรง network option ตามรูป หลังจากนั้นคลิก Add เพื่อที่จะสร้าง connection อันใหม่ขึ้นมา
-
-2. new Ethernet connection ตั้งชื่อว่า Share และกดไปที่ Tab IPv4 Setting เลือก Method เป็น Shared to other computers
-
-3. หลังจากสร้างเสร็จแล้วก็ในนำ SD card ใส่เข้าไปในบอร์ด Odroid และเสียบ Power Source แล้วต่อสาย LAN เข้ากับ PC
+3. หลังจากสร้างเสร็จแล้วก็ในนำ SDcard ใส่เข้าไปใน Odroid และเสียบสาย micro usb 5V แล้วต่อสาย LAN เข้ากับ PC
 
 4. เมื่อ Board boots up ขึ้นมาแล้วมันจะเชื่อมต่อ Share Network โดยอัตโนมัติถ้าหากเชื่อมต่อถูกต้อง แสดงว่าตอนนี้ Board Odroid นั้นจะมี IP Address เป็นของตัวเอง
 
