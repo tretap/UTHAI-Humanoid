@@ -10,8 +10,8 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 
 การติดตั้ง ROS ลงบน Odroid มีวิธีการลงอยู่ 2 แบบคือ
 
-   1. ลง Linux OS เปล่าๆ แล้วถึงลง ROS ตาม
-   2. ลง Linux OS ที่มี ROS มาพร้อมให้ในตัวอยู่แล้ว
+1. ลง Linux OS เปล่าๆ แล้วถึงลง ROS ตาม
+2. ลง Linux OS ที่มี ROS มาพร้อมให้ในตัวอยู่แล้ว
 
 เราจะมาสอนลง ROS บน Odroid แบบที่ 2 คือมี ROS prebuild มาให้
 
@@ -48,15 +48,15 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 
    ใช้ระยะเวลาประมาณ 30 นาที
 
-### Connecting Odroid to PC 
+### Connecting Odroid to PC
 
-1. คลิกที่ Edit Connection... ตรง Network Option ตามรูป หลังจากนั้นคลิก Add เพื่อที่จะสร้าง Connection อันใหม่ขึ้นมา
-![ssh\_1](/assets/ssh_1.jpg)
-เลือกเป็น Ethernet แล้วกด Create...
-![ssh\_2](/assets/ssh_2.png)
+1. คลิกที่ Edit Connection... ตรง Network Option ตามรูป หลังจากนั้นคลิก Add เพื่อที่จะสร้าง Connection อันใหม่ขึ้นมา  
+   ![ssh\_1](/assets/ssh_1.jpg)  
+   เลือกเป็น Ethernet แล้วกด Create...  
+   ![ssh\_2](/assets/ssh_2.png)
 
-2. Connection name ตั้งชื่อว่า Shared และกดไปที่ Tab IPv4 Setting เลือก Method เป็น Shared to other computers
-![ssh\_3](/assets/ssh_3.png)
+2. Connection name ตั้งชื่อว่า Shared และกดไปที่ Tab IPv4 Setting เลือก Method เป็น Shared to other computers  
+   ![ssh\_3](/assets/ssh_3.png)
 
 3. หลังจากสร้างเสร็จแล้วก็ในนำ SDcard ใส่เข้าไปใน Odroid เสียบสาย power 5V แล้วต่อสาย LAN เข้ากับ PC
 
@@ -67,29 +67,34 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
    ```bash
    $ cat /var/lib/misc/dnsmasq.leases
    ```
+
    จะได้ค่าตามแบบที่เห็นนี้
-   
+
    > ไปแคปรูปมาใส่
 
 6. หลังจากได้ IP address มาแล้วก็แสดงว่าเราสามารถที่จะติดต่อกับ Odroid ผ่าน SSH ได้
 
-   ```bash 
-   $ ssh odroid@%ip_address_ของ_odroid%
-   ```  
-   > แคปรูปมาใส่
-   
-   ในที่นี้คือ 10.42.0.91 จะใช้คำสั่งเป็น
    ```bash
-   $ ssh odroid@10.42.0.91 
-   ```  
+   $ ssh odroid@%ip_address_ของ_odroid%
+   ```
+
+   > แคปรูปมาใส่
+
+   ในที่นี้คือ 10.42.0.91 จะใช้คำสั่งเป็น
+
+   ```bash
+   $ ssh odroid@10.42.0.91
+   ```
+
    Password Default จะเป็น `odroid`
-   
+
 7. ถ้าทุกอย่างถูกต้อง เราก็จะสามารถเข้าถึงและควบคุม Odroid ผ่านทาง SSH ได้
-   
+
    > แคปรูปมาใส่
 
 8. ทดลองใช้คำสั่ง `roscore` หากเห็นแบบในรูปก็แสดงว่าสามารถใช้งาน ROS ได้แล้ว
 
    > แคปรูปมาใส่
+
 
 
