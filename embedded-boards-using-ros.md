@@ -96,5 +96,17 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 
    > แคปรูปมาใส่
 
+### Updating the OS
+
+```bash
+$ sudo apt update
+$ sudo apt upgrade
+$ sudo apt dist-upgrade
+$ sudo apt autoremove
+$ sudo apt autoclean
+```
+
+
+
 
 
