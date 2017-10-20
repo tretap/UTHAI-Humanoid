@@ -6,28 +6,20 @@ UTHAI Humanoid is humanoid robot that optimized for research and education purpo
 
 ## Motivation & Objective & Scope
 
-__ที่มาและความสำคัญ__
+**ที่มาและความสำคัญ**
 
 แรงบันดาลใจในการทำโปรเจคครั้งนี้
 
-__วัตถุประสงค์__
+**วัตถุประสงค์**
 
 ออกแบบโครงสร้างและพัฒนาระบบพื้นฐานสำหรับหุ่นยนต์ฮิวมานอยด์เพื่องานวิจัยหรือพัฒนาต่อยอด
 
-__ขอบเขตงานวิจัย__
+**ขอบเขตงานวิจัย**
 
 * ใช้ ROS เป็นเครื่องมือพัฒนาระบบ
 * หุ่นยนต์ฮิวมานอยด์มี 18 DOF
 
-
-
-
-
-
-
-
-
-## The core fibot team
+## The core uthai team
 
 * Bird - Hardware designer
 * Fern - Dynamic controller
@@ -39,3 +31,6 @@ __ขอบเขตงานวิจัย__
 ## Speacial Thanks To
 
 * Aj.Pi
+
+
+
