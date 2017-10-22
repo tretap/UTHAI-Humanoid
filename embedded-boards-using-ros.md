@@ -22,9 +22,7 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 
 3. ใส่ SDcard เข้าเครื่องคอมพิวเตอร์
 
-4. เขียนไฟล์ Image ลง SDcard
-
-   เปิดโปรแกรม Etcher ขึ้นมา กดเลือก Select image
+4. เปิดโปรแกรม Etcher ขึ้นมา กดเลือก Select image
 
    ![Etcher\_1](/assets/Etcher_1.png)  
    เลือกไฟล์ Image ที่ต้องการลงใน Odroid  
@@ -58,7 +56,8 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
    ```bash
    $ cat /var/lib/misc/dnsmasq.leases
    ```
-   จะได้ค่าตามแบบที่เห็นนี้
+
+   จะได้ค่าตามแบบที่เห็นนี้  
    ![ssh\_4](/assets/ssh_4.png)
 
 6. หลังจากได้ IP address มาแล้วก็แสดงว่าเราสามารถที่จะติดต่อกับ Odroid ผ่าน SSH ได้
@@ -66,32 +65,34 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
    ```bash
    $ ssh odroid@%ip_address_ของ_odroid%
    ```
+
    ในที่นี้คือ 10.42.0.91 จะใช้คำสั่งเป็น
 
    ```bash
    $ ssh odroid@10.42.0.91
    ```
+
    ![ssh\_5](/assets/ssh_5.png)
-   
-   ระบบต้องการที่จะเพิ่ม Key Access เข้าระบบให้พิมพ์ `yes` หลังจากนั้นระบบจะขอ password   
+
+   ระบบต้องการที่จะเพิ่ม Key Access เข้าระบบให้พิมพ์ `yes` หลังจากนั้นระบบจะขอ password  
    Password Default จะเป็น `odroid`
-   
+
    ![ssh\_6](/assets/ssh_6.png)
-   
+
 7. ถ้าทุกอย่างถูกต้อง เราก็จะสามารถเข้าถึงและควบคุม Odroid ผ่านทาง SSH ได้
 
    ![ssh\_7](/assets/ssh_7.png)
 
 8. เมื่อผ่านแล้วก็ให้ทำการอัพเดตระบบ โดยการพิมพ์คำสั่งตามนี้เข้าไปทีละคำสั่ง
-   
-  ```bash
-  $ sudo apt update
-  $ sudo apt -y upgrade
-  $ sudo apt -y dist-upgrade
-  $ sudo apt -y autoremove
-  $ sudo apt -y autoclean
-  ```
-  
+
+   ```bash
+   $ sudo apt update
+   $ sudo apt -y upgrade
+   $ sudo apt -y dist-upgrade
+   $ sudo apt -y autoremove
+   $ sudo apt -y autoclean
+   ```
+
 ## Installing ROS on Odroid board
 
 1. Download ROS Installer
@@ -105,16 +106,23 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
    ```bash
    $ chmod +x ros_installer.sh
    ```
-   
+
 3. Run installer
 
    ```bash
    $ sh ros_installer.sh
    ```
-   
 
 ทดลองใช้คำสั่ง `roscore` หากเห็นแบบในรูปก็แสดงว่าสามารถใช้งาน ROS ได้แล้ว
 
+   ``` cpp
+   int main()
+   {
+      return 0;
+   }
+   ```
+
 > แคปรูปมาใส่
+
 
 
