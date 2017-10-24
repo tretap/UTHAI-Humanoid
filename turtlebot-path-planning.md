@@ -30,9 +30,11 @@ free_thresh: 0.196
 
 Map Nodeคือ ส่วนที่ใช้ในการpublishข้อมูลของแผนที่เพื่อนำไปใช้ในส่วนของNodeการค้นหาเส้นทาง
 
-rosrun map\_server map\_server \[ชื่อไฟล์.yaml\]
-
-เช่นrosrun map\_server map\_server mymap.yaml
+    rosrun map\_server map\_server \[ชื่อไฟล์.yaml\]
+    
+เช่น
+    
+    rosrun map\_server map\_server mymap.yaml
 
 จากนั้นจะได้Nodeที่Publishข้อมูลของแผนที่โดยมี
 
