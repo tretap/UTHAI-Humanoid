@@ -36,9 +36,9 @@ rosrun map\_server map\_server \[ชื่อไฟล์.yaml\]
 
 จากนั้นจะได้Nodeที่Publishข้อมูลของแผนที่โดยมี
 
-msg : nav\_msgs/OccupancyGrid
+    msg : nav_msgs/OccupancyGrid
 
-topic : /map
+    topic : /map
 
 service : /static\_map \*\*ใช้ในการรับข้อมูลของแผนที่ครั้งเดียว
 
