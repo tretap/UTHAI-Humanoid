@@ -10,7 +10,7 @@
 
 จากนั้นกำหนดคุณสมบัติของแผนที่ไว้ใน.yaml
 
-**Genarating Map Node**
+# Genarating Map Node
 
 ![](/assets/mp3.jpg)
 
