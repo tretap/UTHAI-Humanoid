@@ -20,35 +20,33 @@ occupied_thresh: 0.65
 free_thresh: 0.196
 ```
 
-
-
-
-
 # Genarating Map Node
 
 ![](/assets/mp3.jpg)
 
-Map Nodeคือ ส่วนที่ใช้ในการpublishข้อมูลของแผนที่เพื่อนำไปใช้ในส่วนของNodeการค้นหาเส้นทาง
+Map Node คือ ส่วนที่ใช้ในการpublishข้อมูลของแผนที่เพื่อนำไปใช้ในส่วนของNodeการค้นหาเส้นทาง
 
-    rosrun map_server map_server [ชื่อไฟล์.yaml]
-    
+```
+rosrun map_server map_server [ชื่อไฟล์.yaml]
+```
+
 เช่น
-    
-    rosrun map_server map_server mymap.yaml
+
+```
+rosrun map_server map_server mymap.yaml
+```
 
 จากนั้นจะได้Nodeที่Publishข้อมูลของแผนที่โดยมี
 
-    msg : nav_msgs/OccupancyGrid
+```
+msg : nav_msgs/OccupancyGrid
 
-    topic : /map
+topic : /map
+```
 
 service : /static\_map \*\*ใช้ในการรับข้อมูลของแผนที่ครั้งเดียว
 
 # Path Planning Node
 
 เป็นNodeที่รับค่าแผนที่เข้ามาจากนั้นนำมาจัดเป็นข้อมูลให้กลายเป็นรูปแบบGridเพื่อใช้ในA\* Search
-
-
-
-
 
