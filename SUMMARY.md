@@ -8,4 +8,5 @@
 * [3D Print Parts](3d-print-parts.md)
 * [Knowledge Requirement](knowledge-requirement.md)
 * [Turtlebot Path Planning](turtlebot-path-planning.md)
+* [Footstep Planning](footstep-planning.md)
 
