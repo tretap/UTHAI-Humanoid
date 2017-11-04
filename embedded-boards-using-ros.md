@@ -115,12 +115,12 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 
 ทดลองใช้คำสั่ง `roscore` หากเห็นแบบในรูปก็แสดงว่าสามารถใช้งาน ROS ได้แล้ว
 
-   ``` cpp
+```cpp
    int main()
    {
       return 0;
    }
-   ```
+```
 
 > แคปรูปมาใส่
 
