@@ -9,4 +9,5 @@
 * [Knowledge Requirement](knowledge-requirement.md)
 * [Turtlebot Path Planning](turtlebot-path-planning.md)
 * [Footstep Planning](footstep-planning.md)
+* [KalmanFilter](kalmanfilter.md)
 
