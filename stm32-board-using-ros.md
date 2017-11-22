@@ -40,23 +40,22 @@ mbed IDE or offline compilers for programming the boards. The advantage of using
 
 online IDE is it will be updated and will have more hardware support.
 
-Let's start programming the STM 32 board:
 
-1. The first step is to create an account on the mbed website, which is
 
-[https://developer.mbed.org](https://developer.mbed.org) .
+### เริ่มเขียนโปรแกรมโดยใช้ STM32 board
 
-1. After creating an account, go to the following link to check our board has support
+1. สมัครสมาชิกที่เว็บไซต์ mbed
+[https://os.mbed.com/](https://os.mbed.com/)
 
-in the mbed platform: [https://developer.mbed.org/platforms/](https://developer.mbed.org/platforms/) .
+1. หลังจากสมัครสมาชิกเสร็จแล้ว เข้าไปดู board ที่ระบบรองรับ
+[https://os.mbed.com/platforms/](https://os.mbed.com/platforms/)
 
-1. You can select your board from this website; for this demo, you should choose
+1. เราจะเลือก board ของเราได้จากหน้านี้ ในที่นี้เราจะเลือก NUCLEO F411RE board
+![](/assets/mbed_1.png)
+หรือเข้าไปที่หน้านี้ [https://os.mbed.com/platforms/ST-Nucleo-F411RE/](https://os.mbed.com/platforms/ST-Nucleo-F411RE/)
+![](/assets/mbed_2.png)
 
-the NUCLEO L476RG board, which is available at
-
-[https://developer.mbed.org/platforms/ST-Nucleo-L476RG/](https://developer.mbed.org/platforms/ST-Nucleo-L476RG/) .
-
-1. You can see an option called Add to your mbed compiler on the right-hand side
+1. เราจะเห็นปุ่มYou can see an option called Add to your mbed compiler on the right-hand side
 
 of this page. You have to click on this button to add this board to the mbed
 
@@ -118,25 +117,25 @@ the board. Plug the board to your PC, and you will see a flash drive of the boar
 
 You can copy the downloaded binary file to the flash storage, as shown here:
 
-14. When we copy the binary file, the board will automatically start running it. Now,
+1. When we copy the binary file, the board will automatically start running it. Now,
 
 the procedures have been completed. Just start the ROS server on the PC side to
 
 display topics from the board.
 
-15. Start roscore :
+1. Start roscore :
 
 $ roscore
 
-16. Start the ROS server:
+1. Start the ROS server:
 
 $ rosrun rosserial\_python serial\_node.py /dev/ttyACM0
 
-
-
-17. Now you can echo the topic using the following command:
+1. Now you can echo the topic using the following command:
 
 $ rostopic echo /chatter
 
-18. You will get following messages on the Terminal:
+1. You will get following messages on the Terminal:
+
+
 
