@@ -40,52 +40,49 @@ mbed IDE or offline compilers for programming the boards. The advantage of using
 
 online IDE is it will be updated and will have more hardware support.
 
-
-
 ### เริ่มเขียนโปรแกรมโดยใช้ STM32 board
 
-1. สมัครสมาชิกที่เว็บไซต์ mbed
-[https://os.mbed.com/](https://os.mbed.com/)
+1. สมัครสมาชิกที่เว็บไซต์ mbed  
+   [https://os.mbed.com/](https://os.mbed.com/)
 
-1. หลังจากสมัครสมาชิกเสร็จแล้ว เข้าไปดู board ที่ระบบรองรับ
-[https://os.mbed.com/platforms/](https://os.mbed.com/platforms/)
+2. หลังจากสมัครสมาชิกเสร็จแล้ว เข้าไปดู board ที่ระบบรองรับ  
+   [https://os.mbed.com/platforms/](https://os.mbed.com/platforms/)
 
-1. เราจะเลือก board ของเราได้จากหน้านี้ ในที่นี้เราจะเลือก NUCLEO F411RE board
-![](/assets/mbed_1.png)
-หรือเข้าไปที่หน้านี้ [https://os.mbed.com/platforms/ST-Nucleo-F411RE/](https://os.mbed.com/platforms/ST-Nucleo-F411RE/)
-![](/assets/mbed_2.png)
+3. เราจะเลือก board ของเราได้จากหน้านี้ ในที่นี้เราจะเลือก NUCLEO F411RE board  
+   ![](/assets/mbed_1.png)  
+   หรือเข้าไปที่หน้านี้ [https://os.mbed.com/platforms/ST-Nucleo-F411RE/](https://os.mbed.com/platforms/ST-Nucleo-F411RE/)  
+   ![](/assets/mbed_2.png)
 
-1. เราจะเห็นปุ่มYou can see an option called Add to your mbed compiler on the right-hand side
+4. เราจะเห็นปุ่ม Add to your mbed compiler อยู่ตรงทางขวาของเพจ ให้กดปุ่มเพื่อที่จะเพิ่ม board นี้เข้า mbed compiler 
+   ![](/assets/mbed_3.png)
+   
+5. หลังจากเพิ่ม board เข้า compiler แล้ว เราจะเขียนโปรแกรมได้โดยการเข้าไปที่ mbed compiler
+   หรือเข้าไปที่ [https://os.mbed.com/compiler/](https://os.mbed.com/compiler/)
+   ![](/assets/mbed_4.png)
 
-of this page. You have to click on this button to add this board to the mbed
+6. กดสร้างโปรแกรมใหม่ขึ้นมา เพื่อทดสอบการทำงานของ board โดยใช้โปรแกรมตัวอย่าง mbed blinkly
+   ![](/assets/mbed_5.png)
+   
+   เปิดไฟล์ maim.cpp แล้วกด compile
+   ![](/assets/mbed_6.png)
+   ![](/assets/mbed_7.png)
+   ![](/assets/mbed_8.png)
+   
+   หลังจากนั้นจะได้ไฟล์ binary (.bin) ซึ่งสามารถนำไปใส่ไว้ใน flash drive ของ board
+   ![](/assets/mbed_9.png)
+   
+   ถ้าเห็นไฟสีเหลืองกระพริบๆ แสดงว่า STM32 board ของเราพร้อมสำหรับการทำ ROS Node แล้ว
 
-compiler. We can add any number of boards to the mbed compiler; also, we can
+### เริ่มเขียนโปรแกรม STM32 board ให้เป็น ROS Node
 
-choose the board before compiling.
+1. เปิด mbed compiler ขึ้นมาหรือเข้าไปที่ [https://os.mbed.com/compiler/](https://os.mbed.com/compiler/) แล้วกด Import
+   ![](/assets/mbed_10.png)
 
-1. After adding the board to the compiler, we can compile a ROS node for this
-
-board. As we've already discussed, we can program the board using the online
-
-IDE or an offline compiler such as gcc4embed
-
-\( [https://github.com/adamgreen/gcc4mbed](https://github.com/adamgreen/gcc4mbed) \). Using offline compilers, we can
-
-only program a limited number of boards, but the online IDE can handle the
-
-latest boards.
-
-1. The programming APIs of the ROS node in STM 32 are the same as those for
-
-Arduino, only the environment and tools are different.
-
-1. The online ros\_lib files for mbed are available at
+6. The online ros_lib files for mbed are available at
 
 [https://developer.mbed.org/users/garyservin/code/](https://developer.mbed.org/users/garyservin/code/) . You can find ros\_lib
 
-for the Kinetic, Jade, and Indigo versions. You can try with the ROS version you
-
-are working on.
+for the Kinetic
 
 1. You can look at Hello World code for each ROS distribution from the preceding
 
