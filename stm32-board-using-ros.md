@@ -84,6 +84,11 @@ $ rostopic pub -1 /toggle_led std_msgs/Empty "{}"
 หลอดไฟสีเหลืองที่ board จะติดขึ้นมา หากใช้คำสั่งเดิมอีกครั้งหลอดไฟจะดับ
 ![](/assets/mbed_19.png)
 
-จากนี้เราสามารถเขียนโปรแกรมให้ mbed board โดยใช้ภาษา C++ ในการเขียน
+จากนี้เราสามารถเขียนโปรแกรม mbed board โดยใช้ภาษา C++ ซึ่งสามารถทำตาม Tutorials ได้จากลิ้งค์นี้ [http://wiki.ros.org/rosserial_mbed/Tutorials](http://wiki.ros.org/rosserial_mbed/Tutorials)
+![](/assets/mbed_20.png)
+
+
+
+
 
 
