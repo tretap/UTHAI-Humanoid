@@ -2,43 +2,6 @@
 
 ถ้าการใช้ Arduino ไม่เพียงพอต่อการใช้ในหุ่นยนต์ของเรา ไม่ต้องห่วง ในปัจจุบันมี ARM-based controller boards อยู่มากมาย เช่น STM32 microcontroller based ที่เรียกว่า NUCLEO
 
-The STM32 is a family of 32-bit microcontrollers from a company
-
-called STMicroelectronics \( [http://www.st.com/content/st\_com/en.html](http://www.st.com/content/st_com/en.html) \). They
-
-manufacture microcontrollers based on different ARM architectures, such as the Cortex-M
-
-series. The STM32 controllers offer a lot more clock speed than Arduino boards. The range
-
-of STM32 controllers are from 24 MHz to 216 MHz, and the flash memory sizes are from 16
-
-KB to 2 MB. In short, STM32 controllers offer a stunning configuration with a wider range
-
-of features than the Arduino. Most boards work at 3.3V and have a wide range of
-
-functionalities on the GPIO pins.
-
-The STM32 boards are not more popular in the hobby/DIY community than the Arduino,
-
-but they are mainly used in high-end robot controllers. Here is an STM 32 Nucleo board:
-
-Interfacing STM32 boards to ROS using mbed
-
-If Arduino is not enough for your application, the STM 32 boards are ready to serve you. To
-
-demonstrate ROS interfacing, we are going to use an STM 32 NUCLEO L476RG
-
-\( [https://developer.mbed.org/platforms/ST-Nucleo-L476RG/](https://developer.mbed.org/platforms/ST-Nucleo-L476RG/) \). Before we begin
-
-programming, let's understand the mbed platform. The mbed platform is a software
-
-platform for programming 32-bit ARM Cortex-M microcontrollers. The mbed platform
-
-developed as a collaborative project by ARM its technology partners. We can use the online
-
-mbed IDE or offline compilers for programming the boards. The advantage of using the
-
-online IDE is it will be updated and will have more hardware support.
 
 ### เริ่มเขียนโปรแกรมโดยใช้ STM32 board
 
@@ -77,62 +40,50 @@ online IDE is it will be updated and will have more hardware support.
 
 1. เปิด mbed compiler ขึ้นมาหรือเข้าไปที่ [https://os.mbed.com/compiler/](https://os.mbed.com/compiler/) แล้วกด Import
    ![](/assets/mbed_10.png)
+   
+2. ทางช่อง Search ขวามือ ให้พิมพ์คำว่า rosserial_mbed ลงไป แล้วกด Search
+   ![](/assets/mbed_11.png)
+   
+   จากนั้นจะเห็นรายชื่อโปรแกรม ให้กดเลือกที่ rosserial_mbed_hello_world_publisher_kinetic ของ Gary Servin
+   ![](/assets/mbed_12.png)
+   
+   และให้ Import! ที่อยู่เหนือปุ่ม Search ระบบจะเด้งหน้าต่างขึ้นมา ให้ติ๊กที่ Update all แล้วกด Import
+   ![](/assets/mbed_13.png)
+   
+3. เปิดไฟล์ main.cpp แล้วกด Compile
+   ![](/assets/mbed_14.png)
+   
+   จากนั้นก็ทำแบบเดิมเซฟไฟล์ .bin แล้วก๊อปไปไว้ใน mbed drive
 
-6. The online ros_lib files for mbed are available at
+4. เมื่อก๊อปไฟล์เสร็จแล้ว board จะรัน code นั้นโดยอัตโนมัติ เป็นอันจบขั้นตอน เหลือแค่ทดสอบรัน ROS ทางฝั่ง PC 
 
-[https://developer.mbed.org/users/garyservin/code/](https://developer.mbed.org/users/garyservin/code/) . You can find ros\_lib
-
-for the Kinetic
-
-1. You can look at Hello World code for each ROS distribution from the preceding
-
-link.
-
-1. You can import the code into the compiler using the following option:
-
-2. This will open the source code in the mbed online IDE, as shown in the next
-
-screenshot. Here, we are testing with Hello World code for ROS Indigo.
-
-1. The area marked 1 is the board we have added to the compiler. Area 2 is
-
-imported source code and ros\_lib for mbed, and area 3 is the button to compile
-
-the source code. You can see the debugging details at the bottom of the compiler:
-
-1. The APIs are the same as those of Arduino we saw in the previous section. In this
-
-code, we are publishing a string message, Hello from STM32 NUCLEO , to a
-
-topic called /chatter . You can display this string on a PC by running the ROS
-
-serial server.
-
-1. Click on the Compile button to download the binary file, which can be copied to
-
-the board. Plug the board to your PC, and you will see a flash drive of the board.
-
-You can copy the downloaded binary file to the flash storage, as shown here:
-
-1. When we copy the binary file, the board will automatically start running it. Now,
-
-the procedures have been completed. Just start the ROS server on the PC side to
-
-display topics from the board.
-
-1. Start roscore :
-
+   Start roscore : เปิด Terminal
+```
 $ roscore
+```
+![](/assets/mbed_15.png)
 
-1. Start the ROS server:
+   Start the ROS server: เปิด Teminal tab ใหม่ขึ้นมา
+```
+$ rosrun rosserial_python serial_node.py /dev/ttyACM0
+```
+![](/assets/mbed_16.png)
 
-$ rosrun rosserial\_python serial\_node.py /dev/ttyACM0
+   List ROS topics: เปิด Terminal tab ใหม่ขึ้นมา
+```
+$ rostopic list -v
+```
+![](/assets/mbed_17.png)
+จะเห็นว่ามี Subcribed topics ที่ชื่อว่า `/toggle_led` ขึ้นมา ซึ่งเป็นการรอสั่ง toggle led หลังจากได้รับ message ที่เป็นชนิด `std_msgs/Empty`
 
-1. Now you can echo the topic using the following command:
+   Test toggle led:
+```
+$ rostopic pub -1 /toggle_led std_msgs/Empty "{}"
+```
+![](/assets/mbed_18.png)
+หลอดไฟสีเหลืองที่ board จะติดขึ้นมา หากใช้คำสั่งเดิมอีกครั้งหลอดไฟจะดับ
+![](/assets/mbed_19.png)
 
-$ rostopic echo /chatter
-
-1. You will get following messages on the Terminal:
-
+จากนี้เราสามารถเขียนโปรแกรมให้ mbed board โดยใช้ภาษา C++ ในการเขียน
 
 
