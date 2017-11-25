@@ -98,13 +98,13 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 1. Download ROS Installer
 
    ```bash
-   $ wget https://raw.githubusercontent.com/SweiLz/UTHAI-Humanoid/master/ros_installer.sh
+   $ wget https://raw.githubusercontent.com/FIBO-KMUTT/UTHAI-Humanoid/master/uthai_utils/ros_installer/ros_installer_odroid.sh
    ```
 
 2. Change permission
 
    ```bash
-   $ chmod +x ros_installer.sh
+   $ chmod +x ros_installer_odroid.sh
    ```
 
 3. Run installer
@@ -115,7 +115,7 @@ Odroid-XU4 สามารถลง Ubuntu 16.04 ,Android 4.4 KitKat, 5.0 Lollip
 
 ทดลองใช้คำสั่ง `roscore` หากเห็นแบบในรูปก็แสดงว่าสามารถใช้งาน ROS ได้แล้ว
 
-> แคปรูปมาใส่
+
 
 
 
