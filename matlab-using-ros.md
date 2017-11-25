@@ -1,18 +1,18 @@
 System: Ubuntu 16.04.02  
- ROS: Kinetic  
- MATLAB: R2016b \(Robotic Toolkit Required\)
+ROS: Kinetic  
+MATLAB: R2017a \(Robotic Toolkit Required\)
 
-Here is a brief tutorial of Matlab ROS interface:
-
-# Step 1: Get started {#step-1-get-started}
+การติดต่อกับ ROS โดยใช้ MATLAB
+# Step 1: Get started
 
 Initialize the ROS master service \(In the Matlab Command window\):
 
 ```
 rosinit
 ```
+![](/assets/matlab_ros_1.png)
 
-Then you can use a series of ROS commands such as rosnode, rostopic and rosservice. The ROS Tab function is also available. You can try the following commands to make a more deep comprehension of the Matlab ROS interface \(You can use command _exampleHelperROSCreateSampleNetwork_, which is supplied by Matlab, to create some demo nodes in matlab command window\):
+เราสามารถใช้คำสั่งต่างๆของ ROS ได้ เช่น rosnode, rostopic, rosservice สามารถใช้ Tab complete ได้
 
 ```
 rosnode list
@@ -27,30 +27,39 @@ rosservice type /XXX
 rosmsg show XXX
 ```
 
-Except for starting a ROS master by rosinit, you can also connect to an external ROS master by rosinit with some argument. For example:  
- Use
+ถ้าหากต้องการให้ rosinit ต่อกับ external ROS master เราจะต้องใส่ argument เพิ่มนิดหน่อย 
+
+ใน terminal window ใช้คำสั่ง `roscore` ในการรัน ROS master แล้วเราจะเห็น **ROS_MASTER_URL**:http://XXX 
 
 ```
 roscore
 ```
+![](/assets/matlab_ros_2.png)
+ในที่นี้เป็น http://liews:11311/
 
-in the terminal window to start a ROS master. Then you will get a **ROS\_MASTER\_URL**: [http://XXX](http://XXX). In the matlab command window, use the command
+จากนั้นกลับมาที่ MATLAB Command Window
 
 ```
-rosinit('http://XXX')
+rosinit('http://liews:11311/')
 ```
+![](/assets/matlab_ros_3.png)
 
-Afterwards, you may see that a new node named **/matlab\_global\_node\_XXX** is created.
+หลังจากนั้นเราจะเห็นว่ามี Node ใหม่ถูกสร้างขึ้นมา **/matlab\_global\_node\_XXX**
 
-Wanna exist? Use the command:
+ถ้าต้องการปิด Node นั้นให้ใช้คำสั่ง
 
 ```
 rosshutdown
 ```
 
-# Step 2: Topic - Publish & Subscribe {#step-2-topic-publish-subscribe}
+# Step 2: Topic - Publish & Subscribe
 
-Suppose that you have used the demo command _exampleHelperROSCreateSampleNetwork_. Now insert the command
+ใน matlab มีคำสั่งสำหรับการสร้าง demo node อยู่โดยคำสั่งคือ 
+
+```
+exampleHelperROSCreateSampleNetwork
+```
+เมื่อเราใส่คำสั่งนี้ลงไปใน matlab command window แล้ว
 
 ```
 rostopic list
