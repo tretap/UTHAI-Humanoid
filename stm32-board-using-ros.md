@@ -1,7 +1,6 @@
 # The STM32 board
 
 ถ้าการใช้ Arduino ไม่เพียงพอต่อการใช้ในหุ่นยนต์ของเรา ไม่ต้องห่วง ในปัจจุบันมี ARM-based controller boards อยู่มากมาย เช่น STM32 microcontroller based ที่เรียกว่า NUCLEO
-![](/assets/mbed_0.png)
 
 ### STM32 PinOut
 ![](/assets/mbed_22.png)
