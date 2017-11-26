@@ -8,5 +8,4 @@
 * [Uthai Specification Details](uthai-specification-details.md)
 * [Make URDF from Robot model in Solidworks](make-urdf-from-robot-model-in-solidworks.md)
 * [Turtlebot Path Planning](turtlebot-path-planning.md)
-* [Generate ROS Node Simulink](generate-ros-node-simulink.md)
 
