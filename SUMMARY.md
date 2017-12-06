@@ -8,4 +8,6 @@
 * [Uthai Specification Details](uthai-specification-details.md)
 * [Make URDF from Robot model in Solidworks](make-urdf-from-robot-model-in-solidworks.md)
 * [Turtlebot Path Planning](turtlebot-path-planning.md)
+* [STM32 Dynamixel and MPU9250](stm32-dynamixel-and-mpu9250.md)
+* [Converting DH Table to URDF Model](converting-dh-table-to-urdf-model.md)
 
